@@ -1,25 +1,29 @@
-package com.autentia.courses.model;
+package com.autentia.courses.model.entity;
 
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.io.Serializable;
 
 @Data
 @Builder
+@AllArgsConstructor
+@NoArgsConstructor
 @Entity
 @Table(name = "course")
 public class Course implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @Column(name = "name")
+    @Column(name = "title")
+    private String title;
+    @Column(name = "active")
     private Boolean active;
     @Column(name = "professor")
     private String professor;
-    @Column(name = "title")
-    private String title;
     @Column(name = "level")
     private String level;
     @Column(name = "hours")

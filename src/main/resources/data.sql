@@ -9,9 +9,11 @@ CREATE TABLE public.course (
         hours integer NOT NULL
 );
 
-INSERT INTO COURSE (active,professor,title,level,hours) VALUES (true,'Roberto Canales','Introducción a JSF 2','Intermedio',25);
-INSERT INTO COURSE (active,professor,title,level,hours) VALUES (true,'David Goméz','Novedades en Java 8','Básico',10);
-INSERT INTO COURSE (active,professor,title,level,hours) VALUES (true,'Alberto Moratilla','Java para sistemas','Básico',25);
-INSERT INTO COURSE (active,professor,title,level,hours) VALUES (true,'Rubén Aguilera','Angular 2','Intermedio',25);
-INSERT INTO COURSE (active,professor,title,level,hours) VALUES (false,'Rubén Aguilera','React','Intermedio',10);
+INSERT INTO COURSE (title,active,professor,level,hours) VALUES ('Introducción a JSF 2',true,'Roberto Canales','Intermedio',25);
+INSERT INTO COURSE (title,active,professor,level,hours) VALUES ('Clean Code',false,'Robert C Martin','Básico',10);
+INSERT INTO COURSE (title,active,professor,level,hours) VALUES ('Novedades en Java 8',true,'David Goméz','Básico',10);
+INSERT INTO COURSE (title,active,professor,level,hours) VALUES ('Java para sistemas',true,'Alberto Moratilla','Básico',25);
+INSERT INTO COURSE (title,active,professor,level,hours) VALUES ('Angular 2',true,'Rubén Aguilera','Intermedio',25);
+INSERT INTO COURSE (title,active,professor,level,hours) VALUES ('React',false,'Rubén Aguilera','Intermedio',10);
+
 
