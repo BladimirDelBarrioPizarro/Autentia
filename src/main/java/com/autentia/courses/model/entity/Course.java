@@ -1,9 +1,6 @@
 package com.autentia.courses.model.entity;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -36,10 +33,22 @@ public class Course implements Serializable {
     private Professor professor;
 
 
-    public Course(String title, Boolean active, String professor, String level, Integer hours) {
+
+
+
+    public Course(String title,Boolean active, String nameProfessor, String level, Integer hours, Professor professor) {
+         this.title = title;
+         this.active = active;
+         this.professor = professor;
+         this.level = level;
+         this.hours = hours;
+    }
+
+    public Course(String title,Boolean active, String level, Integer hours, Professor professorDummy) {
         this.title = title;
         this.active = active;
         this.level = level;
         this.hours = hours;
+        this.professor = professorDummy;
     }
 }

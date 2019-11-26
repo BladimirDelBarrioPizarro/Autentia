@@ -13,7 +13,7 @@ import org.springframework.data.domain.PageRequest;
 import java.awt.print.Pageable;
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.BDDMockito.given;
 
@@ -21,20 +21,17 @@ import static org.mockito.BDDMockito.given;
 public class CourseServiceTestImpl {
 
     private CourseService courseService = Mockito.mock(CourseService.class);
-/*
+
 
     @Test
     void findAllByActiveAll(){
         PageRequest pageable = CourseServiceDummy.pageRequestDummy();
-        List<CourseDTO> courseDTOList = CourseServiceDummy.courseDTOListDummy();
         List<Course> courseList = CourseServiceDummy.courseListDummy();
+        List<CourseDTO> courseDTOList = CourseMapper.mapListCourseToListCourseDTO(courseList);
         given(courseService.findAllByActive(any())).willReturn(courseDTOList);
         List<CourseDTO> courseDTOS = courseService.findAllByActive(pageable);
-        List<CourseDTO> courseDTOS1 = CourseMapper.mapListCourseToListCourseDTO(courseList);
         assert (courseDTOS!=null);
-        assert (courseDTOS1!=null);
         assert (courseDTOS.get(0).getTitle().equals("React"));
+        assert (courseDTOList.size()==6);
     }
-*/
-
 }
