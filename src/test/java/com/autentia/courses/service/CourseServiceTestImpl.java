@@ -1,5 +1,6 @@
 package com.autentia.courses.service;
 
+
 import com.autentia.courses.model.dto.CourseDTO;
 import com.autentia.courses.model.entity.Course;
 import com.autentia.courses.model.map.CourseMapper;
@@ -10,16 +11,13 @@ import org.mockito.Mockito;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.data.domain.PageRequest;
 
-import java.awt.print.Pageable;
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.BDDMockito.given;
 
 @ExtendWith(MockitoExtension.class)
 public class CourseServiceTestImpl {
-
     private CourseService courseService = Mockito.mock(CourseService.class);
 
 

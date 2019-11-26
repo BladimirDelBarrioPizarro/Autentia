@@ -3,6 +3,7 @@ package com.autentia.courses.service.impl;
 import com.autentia.courses.dao.CourseDao;
 import com.autentia.courses.model.dto.CourseDTO;
 import com.autentia.courses.model.entity.Course;
+import com.autentia.courses.model.exceptions.HandleExceptionPOST;
 import com.autentia.courses.model.exceptions.HandleExceptionPagination;
 import com.autentia.courses.model.map.CourseMapper;
 import com.autentia.courses.service.CourseService;
@@ -18,10 +19,10 @@ public class CourseServiceImpl implements CourseService {
 
     private CourseDao courseDao;
 
-
     public CourseServiceImpl(CourseDao courseDao){
         this.courseDao = courseDao;
     }
+
 
     @Override
     public List<CourseDTO> findAllByActive(Pageable pageable) {
@@ -33,13 +34,16 @@ public class CourseServiceImpl implements CourseService {
             log.error(" -- ERROR AUTENTIA {}",ex.getMessage());
             throw new HandleExceptionPagination(ex);
         }
-
         return CourseMapper.mapListCourseToListCourseDTO(courseList);
     }
 
     @Override
     public CourseDTO insertCourse(Course course) {
-        return CourseMapper.mapCourseToCourseDTO(courseDao.save(course));
+        try{
+            return CourseMapper.mapCourseToCourseDTO(courseDao.save(course));
+        }catch (Exception ex){
+            throw new HandleExceptionPOST(ex);
+        }
     }
 
     private PageRequest pageRequest(Pageable pageable){

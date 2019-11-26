@@ -5,14 +5,13 @@ import com.autentia.courses.model.entity.Course;
 import com.autentia.courses.model.entity.Professor;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
+
 import java.util.Arrays;
 import java.util.List;
 
-
 public class CourseServiceDummy {
-
     public static PageRequest pageRequestDummy(){
-        return  PageRequest.of(0, 5,Sort.Direction.DESC, "title");
+        return  PageRequest.of(0, 5, Sort.Direction.DESC, "title");
     }
 
     public static List<Course> courseListDummy(){
@@ -44,7 +43,4 @@ public class CourseServiceDummy {
                 .name("Test name Professor")
                 .build();
     }
-
-
 }
-

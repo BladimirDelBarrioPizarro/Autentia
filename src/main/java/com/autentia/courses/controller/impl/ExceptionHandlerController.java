@@ -3,6 +3,7 @@ package com.autentia.courses.controller.impl;
 
 import com.autentia.courses.model.constants.ErrorMessages;
 import com.autentia.courses.model.dto.HttpErrorDTO;
+import com.autentia.courses.model.exceptions.HandleExceptionPOST;
 import com.autentia.courses.model.exceptions.HandleExceptionPagination;
 import com.autentia.courses.model.map.CourseMapper;
 import lombok.extern.slf4j.Slf4j;
@@ -37,5 +38,13 @@ public class ExceptionHandlerController extends ResponseEntityExceptionHandler{
                 getCurrentRequest().getRequestURI());
         return CourseMapper.buildHttpErrorDTO(getCurrentRequest().hashCode(), HttpStatus.CONFLICT,
                 getCurrentRequest().getServletPath(), ErrorMessages.AUTENTIA_ERROR_PAGINATION,getCurrentRequest().getMethod(),new Date());
+    }
+
+    @ExceptionHandler(HandleExceptionPOST.class)
+    public ResponseEntity<HttpErrorDTO> handleExceptionPOST(Exception ex) {
+        log.error(" -- ERROR API AUTENTIA: Incorrect parameters {} {} {} ",getCurrentRequest().getMethod(),getCurrentRequest().getContextPath(),
+                getCurrentRequest().getRequestURI());
+        return CourseMapper.buildHttpErrorDTO(getCurrentRequest().hashCode(), HttpStatus.FORBIDDEN,
+                getCurrentRequest().getServletPath(), ErrorMessages.AUTENTIA_ERROR_POST,getCurrentRequest().getMethod(),new Date());
     }
 }
