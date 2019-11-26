@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.List;
 
 
 @Data
@@ -27,6 +28,12 @@ public class Course implements Serializable {
     private String level;
     @Column(name = "hours")
     private Integer hours;
+
+    @OneToOne(fetch = FetchType.LAZY)
+    @JoinTable(name = "course_professor",
+            joinColumns = @JoinColumn(name="course_id"),inverseJoinColumns = @JoinColumn(name="professor_id"),
+            uniqueConstraints = {@UniqueConstraint(columnNames = {"course_id","professor_id"})})
+    private Professor professor;
 
 
     public Course(String title, Boolean active, String professor, String level, Integer hours) {

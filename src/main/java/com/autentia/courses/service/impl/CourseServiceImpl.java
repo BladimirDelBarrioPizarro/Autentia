@@ -17,17 +17,15 @@ import java.util.stream.Collectors;
 public class CourseServiceImpl implements CourseService {
 
     private CourseDao courseDao;
-    private ProfessorDao professorDao;
 
-    public CourseServiceImpl(CourseDao courseDao,ProfessorDao professorDao){
+
+    public CourseServiceImpl(CourseDao courseDao){
         this.courseDao = courseDao;
-        this.professorDao = professorDao;
     }
 
     @Override
     public List<CourseDTO> findAllByActive(Pageable pageable) {
         pageable = pageRequest(pageable);
-        List<Professor> professorList = professorDao.findAll(pageable).stream().filter(item->item.getCourseList().get(0).getActive()).collect(Collectors.toList());
         List<Course> courseList = courseDao.findAll(pageable).stream().filter(Course::getActive).collect(Collectors.toList());
         return CourseMapper.mapListCourseToListCourseDTO(courseList);
     }
