@@ -5,8 +5,6 @@ import com.autentia.courses.model.dto.CourseDTO;
 import com.autentia.courses.model.entity.Course;
 import com.autentia.courses.model.map.CourseMapper;
 import com.autentia.courses.service.CourseService;
-import lombok.extern.slf4j.Slf4j;
-import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
@@ -14,7 +12,6 @@ import org.springframework.data.domain.Sort;
 import java.util.List;
 import java.util.stream.Collectors;
 
-@Slf4j
 public class CourseServiceImpl implements CourseService {
 
     private CourseDao courseDao;

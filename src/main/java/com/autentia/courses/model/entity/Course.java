@@ -28,4 +28,12 @@ public class Course implements Serializable {
     private String level;
     @Column(name = "hours")
     private Integer hours;
+
+    public Course(String title, Boolean active, String professor, String level, Integer hours) {
+        this.title = title;
+        this.active = active;
+        this.professor = professor;
+        this.level = level;
+        this.hours = hours;
+    }
 }
