@@ -16,7 +16,7 @@ public class CourseMapper {
         return courseList.stream().map(CourseMapper::mapCourseToCourseDTO).collect(Collectors.toList());
     }
 
-    private static CourseDTO mapCourseToCourseDTO(Course course) {
+    public static CourseDTO mapCourseToCourseDTO(Course course) {
         return CourseDTO.builder()
                 .id(course.getId())
                 .title(course.getTitle())
