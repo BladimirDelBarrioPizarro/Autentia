@@ -21,6 +21,7 @@ import static org.mockito.BDDMockito.given;
 public class CourseServiceTestImpl {
 
     private CourseService courseService = Mockito.mock(CourseService.class);
+/*
 
     @Test
     void findAllByActiveAll(){
@@ -34,5 +35,6 @@ public class CourseServiceTestImpl {
         assert (courseDTOS1!=null);
         assert (courseDTOS.get(0).getTitle().equals("React"));
     }
+*/
 
 }

@@ -12,7 +12,7 @@ import java.util.List;
 
 public class CourseServiceDummy {
 
-    public static PageRequest pageRequestDummy(){
+ /*   public static PageRequest pageRequestDummy(){
         return  PageRequest.of(0, 5,Sort.Direction.DESC, "title");
     }
 
@@ -36,6 +36,6 @@ public class CourseServiceDummy {
                 new CourseDTO(5L,"Java para sistemas","Alberto Moratilla","Básico",25,true),
                 new CourseDTO(6L,"Angular 2","Rubén Aguilera","Intermedio",25, true)
         );
-    }
+    }*/
 }
 

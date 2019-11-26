@@ -16,7 +16,7 @@ public class CourseMapper {
                 .title(course.getTitle())
                 .active(course.getActive())
                 .hours(course.getHours())
-                .professor(course.getProfessor())
+               // .professor(course.getProfessor().getName())
                 .level(course.getLevel())
                 .build();
     }

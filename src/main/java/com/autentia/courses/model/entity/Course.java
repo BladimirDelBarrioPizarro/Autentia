@@ -8,6 +8,7 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 import java.io.Serializable;
 
+
 @Data
 @Builder
 @AllArgsConstructor
@@ -22,17 +23,15 @@ public class Course implements Serializable {
     private String title;
     @Column(name = "active")
     private Boolean active;
-    @Column(name = "professor")
-    private String professor;
     @Column(name = "level")
     private String level;
     @Column(name = "hours")
     private Integer hours;
 
+
     public Course(String title, Boolean active, String professor, String level, Integer hours) {
         this.title = title;
         this.active = active;
-        this.professor = professor;
         this.level = level;
         this.hours = hours;
     }
