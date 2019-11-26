@@ -11,7 +11,6 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 
-import javax.persistence.criteria.Order;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -32,6 +31,7 @@ public class CourseServiceImpl implements CourseService {
     }
 
     private PageRequest pageRequest(Pageable pageable){
-        return PageRequest.of(pageable.getPageNumber(), pageable.getPageSize(),pageable.getSort());
+        Sort sort = pageable.getSort();
+        return PageRequest.of(pageable.getPageNumber(), pageable.getPageSize(), sort);
     }
 }
