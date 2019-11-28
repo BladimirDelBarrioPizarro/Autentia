@@ -14,6 +14,28 @@ public class CourseServiceDummy {
         return  PageRequest.of(0, 5, Sort.Direction.DESC, "title");
     }
 
+    public static Course courseDummy(){
+        return Course.builder()
+                .id(2L)
+                .active(true)
+                .hours(34)
+                .level("Intermedio")
+                .professor(professorDummy())
+                .title("Test title")
+                .build();
+    }
+
+    public static CourseDTO courseDTODummy(){
+        return CourseDTO.builder()
+                .id(2L)
+                .active(true)
+                .hours(34)
+                .level("Intermedio")
+                .title("Test title")
+                .build();
+    }
+
+
     public static List<Course> courseListDummy(){
         return Arrays.asList(
                 new Course("React",false,  "Intermedio",10,professorDummy()),
