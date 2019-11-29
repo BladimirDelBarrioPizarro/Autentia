@@ -12,6 +12,7 @@ import com.autentia.courses.service.impl.CourseServiceImpl;
 import com.autentia.courses.service.impl.ProfessorServiceImpl;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.hateoas.server.EntityLinks;
 
 @Configuration
 public class ApiConfig {
@@ -28,12 +29,12 @@ public class ApiConfig {
     }
 
     @Bean
-    public CourseController courseController(CourseService courseService){
-        return new CourseControllerImpl(courseService);
+    public CourseController courseController(CourseService courseService,EntityLinks entityLinks){
+        return new CourseControllerImpl(courseService, entityLinks);
     }
 
     @Bean
-    public ProfessorController professorController(ProfessorService professorService){
-        return new ProfessorControllerImpl(professorService);
+    public ProfessorController professorController(ProfessorService professorService,EntityLinks entityLinks){
+        return new ProfessorControllerImpl(professorService,entityLinks);
     }
 }

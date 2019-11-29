@@ -16,6 +16,7 @@ INSERT INTO COURSE (title,active,level,hours) VALUES ('Novedades en Java 8',true
 INSERT INTO COURSE (title,active,level,hours) VALUES ('Java para sistemas',true,'Básico',25);
 INSERT INTO COURSE (title,active,level,hours) VALUES ('Angular 2',true,'Intermedio',25);
 INSERT INTO COURSE (title,active,level,hours) VALUES ('React',false,'Intermedio',10);
+INSERT INTO COURSE (title,active,level,hours) VALUES ('Spring Cloud',true,'Intermedio',50);
 
 
 
@@ -31,6 +32,7 @@ INSERT INTO professor (id,name) VALUES(3,'David Goméz');
 INSERT INTO professor (id,name) VALUES(4,'Alberto Moratilla');
 INSERT INTO professor (id,name) VALUES(5,'Rubén Aguilera');
 INSERT INTO professor (id,name) VALUES(6,'Alberto Moratilla');
+INSERT INTO professor (id,name) VALUES(7,'Rod Johnson');
 
 CREATE TABLE public.course_professor(
     course_id integer not null,
@@ -43,6 +45,7 @@ INSERT INTO course_professor(course_id,professor_id) VALUES (3,3);
 INSERT INTO course_professor(course_id,professor_id) VALUES (4,4);
 INSERT INTO course_professor(course_id,professor_id) VALUES (5,5);
 INSERT INTO course_professor(course_id,professor_id) VALUES (6,5);
+INSERT INTO course_professor(course_id,professor_id) VALUES (7,7);
 
 
 

@@ -27,7 +27,6 @@ public class CourseMapper {
                 .build();
     }
 
-
     public static ResponseEntity<HttpErrorDTO> buildHttpErrorDTO(int hashCode, HttpStatus httpStatus, String servletPath, ErrorMessages autentiaErrorPagination, String method, Date date) {
         return new ResponseEntity<>(HttpErrorDTO.builder()
                 .code(hashCode)
