@@ -7,17 +7,19 @@ CREATE TABLE public.course (
         active BOOLEAN,
         title character varying(100) NOT NULL,
         level character varying(100) NOT NULL,
-        hours integer NOT NULL
+        hours integer NOT NULL,
+        fileURL character varying(100) NOT NULL
 );
 
-INSERT INTO COURSE (title,active,level,hours) VALUES ('Introducción a JSF 2',true,'Intermedio',25);
-INSERT INTO COURSE (title,active,level,hours) VALUES ('Clean Code',false,'Básico',10);
-INSERT INTO COURSE (title,active,level,hours) VALUES ('Novedades en Java 8',true,'Básico',10);
-INSERT INTO COURSE (title,active,level,hours) VALUES ('Java para sistemas',true,'Básico',25);
-INSERT INTO COURSE (title,active,level,hours) VALUES ('Angular 2',true,'Intermedio',25);
-INSERT INTO COURSE (title,active,level,hours) VALUES ('React',false,'Intermedio',10);
-INSERT INTO COURSE (title,active,level,hours) VALUES ('Spring Cloud',true,'Intermedio',50);
+INSERT INTO COURSE (title,active,level,hours,fileURL) VALUES ('Introducción a JSF 2',true,'Intermedio',25,'blob:http://localhost:4200/064b1660-5cc4-49d5-9a96-62f0007e21bc');
+INSERT INTO COURSE (title,active,level,hours,fileURL) VALUES ('Clean Code',false,'Básico',10,'blob:http://localhost:4200/064b1660-5cc4-49d5-9a96-62f0007e21bc');
+INSERT INTO COURSE (title,active,level,hours,fileURL) VALUES ('Novedades en Java 8',true,'Básico',10,'blob:http://localhost:4200/064b1660-5cc4-49d5-9a96-62f0007e21bc');
+INSERT INTO COURSE (title,active,level,hours,fileURL) VALUES ('Java para sistemas',true,'Básico',25,'blob:http://localhost:4200/064b1660-5cc4-49d5-9a96-62f0007e21bc');
+INSERT INTO COURSE (title,active,level,hours,fileURL) VALUES ('Angular 2',true,'Intermedio',25,'blob:http://localhost:4200/064b1660-5cc4-49d5-9a96-62f0007e21bc');
+INSERT INTO COURSE (title,active,level,hours,fileURL) VALUES ('React',false,'Intermedio',10,'blob:http://localhost:4200/064b1660-5cc4-49d5-9a96-62f0007e21bc');
+INSERT INTO COURSE (title,active,level,hours,fileURL) VALUES ('Spring Cloud',true,'Intermedio',50,'blob:http://localhost:4200/064b1660-5cc4-49d5-9a96-62f0007e21bc');
 
+/*INSERT INTO COURSE (title,active,level,hours,fileURL) VALUES ('Spring Cloud',true,'Intermedio',50,'blob:http://localhost:4200/064b1660-5cc4-49d5-9a96-62f0007e21bc');*/
 
 
 

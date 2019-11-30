@@ -24,6 +24,7 @@ public class CourseMapper {
                 .hours(course.getHours())
                 .professor(course.getProfessor().getName())
                 .level(course.getLevel())
+                .fileURL(course.getFileURL())
                 .build();
     }
 

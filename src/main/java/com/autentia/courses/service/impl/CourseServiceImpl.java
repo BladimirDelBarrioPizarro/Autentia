@@ -40,6 +40,7 @@ public class CourseServiceImpl implements CourseService {
     @Override
     public CourseDTO insertCourse(Course course) {
         try{
+            log.info("Insert Course");
             return CourseMapper.mapCourseToCourseDTO(courseDao.save(course));
         }catch (Exception ex){
             throw new HandleExceptionPOST(ex);

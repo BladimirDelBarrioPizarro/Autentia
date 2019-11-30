@@ -24,6 +24,8 @@ public class Course implements Serializable {
     private String level;
     @Column(name = "hours")
     private Integer hours;
+    @Column(name = "fileURL")
+    private String fileURL;
 
     @OneToOne(fetch = FetchType.LAZY)
     @JoinTable(name = "course_professor",
