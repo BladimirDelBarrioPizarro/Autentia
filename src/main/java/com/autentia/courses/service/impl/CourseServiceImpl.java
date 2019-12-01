@@ -8,17 +8,24 @@ import com.autentia.courses.model.exceptions.HandleExceptionPagination;
 import com.autentia.courses.model.map.CourseMapper;
 import com.autentia.courses.service.CourseService;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.tomcat.util.codec.binary.Base64;
+import org.hibernate.SessionFactory;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
+import org.springframework.web.multipart.MultipartFile;
+import sun.misc.IOUtils;
+
+
+import java.sql.Blob;
 import java.util.List;
 import java.util.stream.Collectors;
+
 
 @Slf4j
 public class CourseServiceImpl implements CourseService {
 
     private CourseDao courseDao;
-
     public CourseServiceImpl(CourseDao courseDao){
         this.courseDao = courseDao;
     }
@@ -40,7 +47,8 @@ public class CourseServiceImpl implements CourseService {
     @Override
     public CourseDTO insertCourse(Course course) {
         try{
-            log.info("Insert Course");
+            byte[] image = Base64.decodeBase64(course.getFileURL());
+
             return CourseMapper.mapCourseToCourseDTO(courseDao.save(course));
         }catch (Exception ex){
             throw new HandleExceptionPOST(ex);

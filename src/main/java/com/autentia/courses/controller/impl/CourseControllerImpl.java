@@ -11,6 +11,7 @@ import org.springframework.hateoas.Links;
 import org.springframework.hateoas.server.EntityLinks;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.multipart.MultipartFile;
 
 
 import java.util.List;

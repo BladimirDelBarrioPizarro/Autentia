@@ -8,18 +8,20 @@ CREATE TABLE public.course (
         title character varying(100) NOT NULL,
         level character varying(100) NOT NULL,
         hours integer NOT NULL,
-        fileURL character varying(100) NOT NULL
+        fileURL character varying(100000000000) NOT NULL
 );
 
-INSERT INTO COURSE (title,active,level,hours,fileURL) VALUES ('Introducción a JSF 2',true,'Intermedio',25,'blob:http://localhost:4200/064b1660-5cc4-49d5-9a96-62f0007e21bc');
-INSERT INTO COURSE (title,active,level,hours,fileURL) VALUES ('Clean Code',false,'Básico',10,'blob:http://localhost:4200/064b1660-5cc4-49d5-9a96-62f0007e21bc');
-INSERT INTO COURSE (title,active,level,hours,fileURL) VALUES ('Novedades en Java 8',true,'Básico',10,'blob:http://localhost:4200/064b1660-5cc4-49d5-9a96-62f0007e21bc');
-INSERT INTO COURSE (title,active,level,hours,fileURL) VALUES ('Java para sistemas',true,'Básico',25,'blob:http://localhost:4200/064b1660-5cc4-49d5-9a96-62f0007e21bc');
-INSERT INTO COURSE (title,active,level,hours,fileURL) VALUES ('Angular 2',true,'Intermedio',25,'blob:http://localhost:4200/064b1660-5cc4-49d5-9a96-62f0007e21bc');
-INSERT INTO COURSE (title,active,level,hours,fileURL) VALUES ('React',false,'Intermedio',10,'blob:http://localhost:4200/064b1660-5cc4-49d5-9a96-62f0007e21bc');
-INSERT INTO COURSE (title,active,level,hours,fileURL) VALUES ('Spring Cloud',true,'Intermedio',50,'blob:http://localhost:4200/064b1660-5cc4-49d5-9a96-62f0007e21bc');
 
-/*INSERT INTO COURSE (title,active,level,hours,fileURL) VALUES ('Spring Cloud',true,'Intermedio',50,'blob:http://localhost:4200/064b1660-5cc4-49d5-9a96-62f0007e21bc');*/
+
+INSERT INTO COURSE (title,active,level,hours,fileURL) VALUES ('Introducción a JSF 2',true,'Intermedio',25,'blob:http://localhost:4200/070f6f61-d1cd-4561-b9ec-58b6a31852f3');
+INSERT INTO COURSE (title,active,level,hours,fileURL) VALUES ('Clean Code',false,'Básico',10,'blob:http://localhost:4200/070f6f61-d1cd-4561-b9ec-58b6a31852f3');
+INSERT INTO COURSE (title,active,level,hours,fileURL) VALUES ('Novedades en Java 8',true,'Básico',10,'blob:http://localhost:4200/070f6f61-d1cd-4561-b9ec-58b6a31852f3');
+INSERT INTO COURSE (title,active,level,hours,fileURL) VALUES ('Java para sistemas',true,'Básico',25,'blob:http://localhost:4200/070f6f61-d1cd-4561-b9ec-58b6a31852f3');
+INSERT INTO COURSE (title,active,level,hours,fileURL) VALUES ('Angular 2',true,'Intermedio',25,'blob:http://localhost:4200/070f6f61-d1cd-4561-b9ec-58b6a31852f3');
+INSERT INTO COURSE (title,active,level,hours,fileURL) VALUES ('React',false,'Intermedio',10,'blob:http://localhost:4200/070f6f61-d1cd-4561-b9ec-58b6a31852f3');
+INSERT INTO COURSE (title,active,level,hours,fileURL) VALUES ('Spring Cloud',true,'Intermedio',50,'blob:http://localhost:4200/070f6f61-d1cd-4561-b9ec-58b6a31852f3');
+
+
 
 
 
