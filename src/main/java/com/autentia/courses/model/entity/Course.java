@@ -35,13 +35,14 @@ public class Course implements Serializable {
     private Professor professor;
 
 
-    public Course(String title,Boolean active, String level, Integer hours, Professor professorDummy,String fileURL) {
+    public Course(String title,Boolean active, String level, Integer hours, Professor professorDummy,String fileURL,Professor professor) {
         this.title = title;
         this.active = active;
         this.level = level;
         this.hours = hours;
         this.professor = professorDummy;
         this.fileURL = fileURL;
+        this.professor = professor;
     }
 
 

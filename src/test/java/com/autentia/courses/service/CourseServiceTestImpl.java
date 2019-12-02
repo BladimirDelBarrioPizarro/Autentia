@@ -28,6 +28,7 @@ public class CourseServiceTestImpl {
         List<Course> courseList = CourseServiceDummy.courseListDummy();
         List<CourseDTO> courseDTOList = CourseMapper.mapListCourseToListCourseDTO(courseList);
         given(courseService.findAllByActive(any())).willReturn(courseDTOList);
+        given(courseServiceImpl.findAllByActive(any())).willReturn(courseDTOList);
         List<CourseDTO> courseDTOS = courseService.findAllByActive(pageable);
         List<CourseDTO> courseDTOS1 = courseServiceImpl.findAllByActive(pageable);
         assert (courseDTOS!=null);
@@ -41,12 +42,12 @@ public class CourseServiceTestImpl {
         Course course = CourseServiceDummy.courseDummy();
         CourseDTO courseDTO = CourseServiceDummy.courseDTODummy();
         given(courseService.insertCourse(any())).willReturn(courseDTO);
+        given(courseServiceImpl.insertCourse(any())).willReturn(courseDTO);
         CourseDTO courseDTO1 = courseService.insertCourse(course);
         CourseDTO courseDTO2 = CourseMapper.mapCourseToCourseDTO(course);
         CourseDTO courseDTO3 = courseServiceImpl.insertCourse(course);
-        assert (courseDTO1!=null);
+        assert (courseDTO1.getProfessor()==null);
         assert(courseDTO2!=null);
-        assert (courseDTO3==null);
-        assert(courseDTO1.getTitle().equals(courseDTO.getTitle()));
+        assert (courseDTO3.getLevel().equals("Intermedio"));
     }
 }
