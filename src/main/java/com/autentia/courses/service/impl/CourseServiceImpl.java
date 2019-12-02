@@ -8,16 +8,9 @@ import com.autentia.courses.model.exceptions.HandleExceptionPagination;
 import com.autentia.courses.model.map.CourseMapper;
 import com.autentia.courses.service.CourseService;
 import lombok.extern.slf4j.Slf4j;
-import org.apache.tomcat.util.codec.binary.Base64;
-import org.hibernate.SessionFactory;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
-import org.springframework.web.multipart.MultipartFile;
-import sun.misc.IOUtils;
-
-
-import java.sql.Blob;
 import java.util.List;
 import java.util.stream.Collectors;
 
