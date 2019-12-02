@@ -3,8 +3,7 @@ package com.autentia.courses.model.entity;
 import lombok.*;
 import javax.persistence.*;
 import java.io.Serializable;
-import java.sql.Blob;
-import java.util.Map;
+
 
 
 @Data
@@ -26,7 +25,6 @@ public class Course implements Serializable {
     @Column(name = "hours")
     private Integer hours;
     @Lob
-    @Basic(optional = false, fetch = FetchType.EAGER)
     @Column(name = "fileURL")
     private String fileURL;
 

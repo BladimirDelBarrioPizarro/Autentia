@@ -8,7 +8,7 @@ CREATE TABLE public.course (
         title character varying(100) NOT NULL,
         level character varying(100) NOT NULL,
         hours integer NOT NULL,
-        fileURL character varying(100000000000) NOT NULL
+        fileURL CLOB
 );
 
 
