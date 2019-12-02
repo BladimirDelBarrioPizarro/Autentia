@@ -19,7 +19,8 @@ INSERT INTO COURSE (title,active,level,hours,fileURL) VALUES ('Novedades en Java
 INSERT INTO COURSE (title,active,level,hours,fileURL) VALUES ('Java para sistemas',true,'Básico',25,'blob:http://localhost:4200/070f6f61-d1cd-4561-b9ec-58b6a31852f3');
 INSERT INTO COURSE (title,active,level,hours,fileURL) VALUES ('Angular 2',true,'Intermedio',25,'blob:http://localhost:4200/070f6f61-d1cd-4561-b9ec-58b6a31852f3');
 INSERT INTO COURSE (title,active,level,hours,fileURL) VALUES ('React',false,'Intermedio',10,'blob:http://localhost:4200/070f6f61-d1cd-4561-b9ec-58b6a31852f3');
-INSERT INTO COURSE (title,active,level,hours,fileURL) VALUES ('Spring Cloud',true,'Intermedio',50,'blob:http://localhost:4200/070f6f61-d1cd-4561-b9ec-58b6a31852f3');
+INSERT INTO COURSE (title,active,level,hours,fileURL) VALUES ('Spring Framework',true,'Intermedio',10,'blob:http://localhost:4200/070f6f61-d1cd-4561-b9ec-58b6a31852f3');
+
 
 
 

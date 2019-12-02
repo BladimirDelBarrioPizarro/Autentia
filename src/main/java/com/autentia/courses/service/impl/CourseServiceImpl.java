@@ -47,8 +47,6 @@ public class CourseServiceImpl implements CourseService {
     @Override
     public CourseDTO insertCourse(Course course) {
         try{
-            byte[] image = Base64.decodeBase64(course.getFileURL());
-
             return CourseMapper.mapCourseToCourseDTO(courseDao.save(course));
         }catch (Exception ex){
             throw new HandleExceptionPOST(ex);
